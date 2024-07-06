@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+#include <vector> 
+int main()
+{
+    //# cons
+    //* voc
+    //? ambele si voc si cons
+    std::string c1,c2;
+    std::cin>>c1>>c2;
+    std::string simbol;
+    for(int i=0;i<c1.length();i++)
+    {
+        if((c1[i]=='a'||c1[i]=='o'||c1[i]=='u'||c1[i]=='e'||c1[i]=='i')&&(c2[i]=='a'||c2[i]=='o'||c2[i]=='u'||c2[i]=='e'||c2[i]=='i'))
+        {
+            simbol+='*';
+        }
+        else if((c1[i]=='a'||c1[i]=='o'||c1[i]=='u'||c1[i]=='e'||c1[i]=='i')||(c2[i]=='a'||c2[i]=='o'||c2[i]=='u'||c2[i]=='e'||c2[i]=='i'))
+        {
+            simbol+='?';
+        }
+        else simbol+='#';
+    }
+    std::cout<<simbol;
+}
